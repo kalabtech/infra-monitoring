@@ -1,0 +1,3 @@
+# Changes here will be overwritten by Copier
+{_commit: v1.3.0, _src_path: 'gh:kalabtech/infra-terraform-template-backend-prod',
+  aws_region: eu-west-1, github_username: kalabtech, project_name: infra-monitoring}

@@ -1,0 +1,23 @@
+_min_copier_version: "9.0"
+_templates_suffix: ".jinja"
+
+project_name:
+  type: str
+  help: "Project name"
+
+aws_region:
+  type: str
+  help: "AWS region"
+  default: "eu-west-1"
+
+github_username:
+  type: str
+  help: "GitHub username for CODEOWNERS, docker container, script labels and License"
+
+_exclude:
+  - CHANGELOG.md
+  - .copier-answers.yml.example
+  - .terraform.lock.hcl
+  - .git
+  - prod.hcl
+  - docs

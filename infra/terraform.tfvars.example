@@ -1,0 +1,6 @@
+# environments/prod.tfvars.example
+# Copy to prod.tfvars and fill in your values
+
+environment    = "prod"
+project_name   = "your-project-name"
+aws_region     = "your-aws-region"

@@ -1,0 +1,16 @@
+name: Enforce Branch Policy
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  check-source-branch:
+    name: Check Source Branch
+    runs-on: ubuntu-latest
+    steps:
+      - name: Block if not from allowed branches
+        if: github.head_ref != 'dev'
+        run: |
+          echo "PRs to main must be from allowed branches"
+          exit 1
