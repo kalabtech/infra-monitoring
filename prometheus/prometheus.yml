@@ -1,0 +1,6 @@
+scrape_configs:
+  - job_name: "url-shortener-demo"
+    scrape_interval: 15s
+    static_configs:
+    # Local docker app
+      - targets: ["host.docker.internal:5000"]
