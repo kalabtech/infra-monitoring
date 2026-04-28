@@ -32,7 +32,7 @@ resource "aws_vpc_security_group_egress_rule" "allow_https" {
 # NOTE: app port
 resource "aws_vpc_security_group_egress_rule" "app_scrape" {
   security_group_id = aws_security_group.public.id
-  cidr_ipv4         = data.terraform_remote_state.url-shortener.outputs.vpc_cidr
+  cidr_ipv4         = data.terraform_remote_state.url_shortener.outputs.vpc_cidr
   from_port         = 5000
   ip_protocol       = "tcp"
   to_port           = 5000
@@ -41,7 +41,7 @@ resource "aws_vpc_security_group_egress_rule" "app_scrape" {
 # NOTE: prometheus node_exporter port
 resource "aws_vpc_security_group_egress_rule" "node_exporter_scrape" {
   security_group_id = aws_security_group.public.id
-  cidr_ipv4         = data.terraform_remote_state.url-shortener.outputs.vpc_cidr
+  cidr_ipv4         = data.terraform_remote_state.url_shortener.outputs.vpc_cidr
   from_port         = 9100
   ip_protocol       = "tcp"
   to_port           = 9100

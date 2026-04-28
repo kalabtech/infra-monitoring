@@ -10,7 +10,7 @@ data "terraform_remote_state" "network" {
 
 # url-shortener remote state
 # NOTE: hardcoded project name
-data "terraform_remote_state" "url-shortener" {
+data "terraform_remote_state" "url_shortener" {
   backend = "s3"
   config = {
     bucket = var.state_bucket
